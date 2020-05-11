@@ -1,0 +1,16 @@
+﻿Recuperação do aparelho WinCE mobile gps
+1- Abrir o visual studio 2008 > tools > connect to device > selecione Windows CE > Windows CE Device. Clique em conect
+        Se não tiver o visual studio Tente conectar ao pc pelo activesync
+	se não Tente  conectar pelo windows mobile device center
+	Se não conseguir abra o gerenciador de dispositivos o dispositivo pode estar como desconhecido ou com o seguinte nome Generic Serial (PROTOTYPE--Remember to change idVendor).
+	No gerenciador de dispositivos clique em atualizar drive, escolha a opção procurar drive no computador, e navegue até a pasta do drive, baixe o drive para seu pc, arquivo Driver-WCE.zip
+	
+	
+2-Instale no pc o programa CeRegedit, para editar o registro do WinCE, baixe e instale o programa que está no arquivo ceregedit_setup.zip
+
+3-Abra o programa ceregedit e conecte ao dispositivo, pode ser necessário executar como administrador, vá em /hkey local machine/init e procure por lunch.exe ou(Launcher.exe, main.exe), altere o valor desse registro para explorer.exe, reinicie o aparelho.
+	se tudo der certo agora o aparelho vai inicializar o Windows CE, a partir daí é possível abrir qualquer programa pode até iniciar o aplicativo padrão do dispositivo, o gps se for o caso.
+
+4- Restauração do dispositivo, instale dentro do aparelho o programa Total Commander do arquivo TotalCommander.zip acesse a pasta residentFlash2/app e coloque nela o arquivo jwdupdate.exe disponivel no arquivo jwdmain.zip
+
+5-Desfazer o passo 3, para que o dispositivo volte a inicializar normalmente, sem aparecer o Windows CE
